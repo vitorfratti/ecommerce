@@ -1,6 +1,6 @@
 # Projeto: Ecommerce 🛒
 
-<h3><a href="https://ecommerce-vitorfratti.netlify.app/">Clique aqui para visistar o projeto</a></h3>
+<h3><a href="https://ecommerce-vitorfratti.netlify.app/">Clique aqui para visitar o projeto</a></h3>
 
 - ## Home: Página inicial onde ficam os produtos.
 
