@@ -94,6 +94,13 @@
     </header>
     <main>
       <section class="products-container" id="products-container">
+        <div class="products-container__filters-container">
+          <h3>Ordenar por:</h3>
+          <select @change="sortProducts" v-model="filter">
+            <option value="Maior Preço">Maior Preço</option>
+            <option value="Menor Preço">Menor Preço</option>
+          </select>
+        </div>
         <div class="products-cards">
           <div
             v-for="(produto, index) in produtos"
@@ -245,7 +252,8 @@ export default {
       discount: 0,
       promocodeInput: null,
       promocode: "PROMO123",
-    };
+      filter: 'Maior Preço'
+    }
   },
   methods: {
     openCart() {
@@ -371,8 +379,15 @@ export default {
       this.total = 0;
     },
     changePages() {
-      alert("Página de demonstração 😁");
+      alert("Produtos limitados ✅");
     },
+    sortProducts() {
+      if(this.filter === 'Menor Preço') {
+        this.produtos.sort((a, b) => a.price - b.price)
+      } else if(this.filter === 'Maior Preço') {
+        this.produtos.sort((a, b) => b.price - a.price)
+      }
+    }
   },
 };
 </script>
@@ -422,15 +437,36 @@ main {
   background: #ffffff;
 
   section.products-container {
-    padding: 4rem 10rem;
+    padding: 2rem 10rem 4rem 10rem;
     height: 100%;
     transition: 0.4s;
     background: #ffffff;
+
+    .products-container__filters-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 1.5rem;
+      width: 100%;
+
+      h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #171717;
+      }
+
+      select {
+        margin-left: 1rem;
+        border: 1px solid #171717;
+      }
+    }
 
     .products-cards {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      padding-top: 2rem;
 
       .product-card {
         background: #f6f6f6;
@@ -1014,12 +1050,17 @@ button:hover {
     padding: 0 4rem !important;
   }
 
+  section.products-container {
+    padding: 2rem 5% 4rem 5% !important;
+  }
+
   .details-container__main {
     padding: 2rem 5rem 4rem 5rem !important;
   }
 
   .cart-container {
     width: 100% !important;
+    right: -60rem;
   }
 
   .productinthecart-container {
@@ -1090,4 +1131,11 @@ button:hover {
     }
   }
 }
+
+@media only screen and (max-width: 350px) {
+  .product-card {
+    width: 15rem !important;
+  }
+}
+
 </style>
