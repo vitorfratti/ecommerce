@@ -4,7 +4,7 @@
 
 - ## Home: Página inicial onde ficam os produtos.
 
-![HOME](https://user-images.githubusercontent.com/91079601/197835954-89947f5b-8737-4c60-99ef-c58017905e94.png)
+![HOME](https://user-images.githubusercontent.com/91079601/200039675-c59bed82-0cdf-4d88-9c3e-24f559b710df.png)
 
 - ## Detalhes: Essa página é chamada quando um clique no cartão do produto é disparado.
 
@@ -12,7 +12,7 @@
 
 - ## Carrinho: Aba lateral que é chamada quando um produto é adicionado ao carrinho ou quando um clique no botão do carrinho é disparado.
 
-![CART](https://user-images.githubusercontent.com/91079601/197836345-fd2c8769-3cbd-48a7-a775-9e9ca451592b.png)
+![CART](https://user-images.githubusercontent.com/91079601/200039723-8e5d8681-2059-41e9-870a-4eb7a236fbab.png)
 
 - ## Checkout: Página final onde contém uma mensagem da confirmação da compra.
 
